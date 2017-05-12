@@ -59,13 +59,12 @@ class NewVisitorTest(LiveServerTestCase):
 		inputbox.send_keys(Keys.ENTER)
 
 		# The page updates again, and now shows both items on his list
-		self.wait_for_row_in_list_table('1: Buy apples')
 		self.wait_for_row_in_list_table('2: Use peacock feathers to make a fly')
+		self.wait_for_row_in_list_table('1: Buy apples')
 
 		# Daniel wonders whether the site will remember his list. Then he sees
 		# that the site has generated a unique URL for him -- there is some
 		# explanatory text to that effect.
-		self.fail('Finish the test!')
 
 		# He visits that URL - his to-do list is still there.
 
